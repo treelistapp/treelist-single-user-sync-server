@@ -5,6 +5,14 @@
 - `source env/bin/activate`
 - `pip install -r requirements.txt`
 
+## Configure
+- Create `secret.py`
+- Here’s an example content:
+```
+secret_path = 'asdf'
+port = 3000
+```
+
 ## Run
 - `python treelist_single_user_server.py`
 
