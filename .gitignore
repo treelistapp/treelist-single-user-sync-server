@@ -128,5 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# Deployment configuration / Application secrets
+secret.py
+
 # Application data
 *.data
