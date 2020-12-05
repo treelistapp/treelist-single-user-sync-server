@@ -15,6 +15,11 @@ port = 3000
 ```
 - `secret_path` should not be empty as the root path has other functionality.
 
+### Nginx
+Add this to `server` block to enable big file upload:
+
+`client_max_body_size 100M;`
+
 ## Run
 - `python treelist_single_user_server.py`
 
