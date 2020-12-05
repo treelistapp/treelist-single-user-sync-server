@@ -12,6 +12,7 @@
 secret_path = 'asdf'
 port = 3000
 ```
+- `secret_path` should not be empty as the root path has other functionality.
 
 ## Run
 - `python treelist_single_user_server.py`
@@ -20,11 +21,6 @@ port = 3000
 This server persists a single, over-writeable json object. Configure the secret path in secret.py, and after that the json object can be POST to the secret path and read from the same place.
 
 ### Example
-`secret.py`:
-```
-secret_path = 'asdf'
-port = 3000
-```
 
 Write:
 
