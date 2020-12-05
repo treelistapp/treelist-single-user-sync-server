@@ -27,8 +27,14 @@ def index():
 @app.route('/' + secret_path, methods=['POST'])
 def write():
     data = request.json
+    db['data'] = data
     print(data)
     return json_response({'data': data})
-    
+
+@app.route('/' + secret_path, methods=['GET'])
+def read():
+    data = db.get('data', {})
+    return json_response(data)
+
 app.run(port=3000, debug=False)
 db.close()
