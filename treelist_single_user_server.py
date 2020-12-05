@@ -16,13 +16,13 @@ def json_response(obj):
 def index():
     return json_response({'status': 'ok'})
 
-@app.route('/' + secret_path, methods=['POST'])
+@app.route(secret_path, methods=['POST'])
 def write():
     data = request.json
     db['data'] = data
     return json_response({'status': 'ok'})
 
-@app.route('/' + secret_path, methods=['GET'])
+@app.route(secret_path, methods=['GET'])
 def read():
     data = db.get('data', {})
     return json_response(data)

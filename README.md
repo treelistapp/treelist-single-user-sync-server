@@ -10,7 +10,7 @@ This server persists a single, over-writeable json object. Configure the secret 
 - Create `secret.py`
 - Here’s an example content:
 ```
-secret_path = 'asdf'
+secret_path = '/asdf'
 port = 3000
 ```
 - `secret_path` should not be empty as the root path has other functionality.
