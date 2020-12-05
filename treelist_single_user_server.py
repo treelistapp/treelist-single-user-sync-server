@@ -4,8 +4,10 @@ import shelve
 from flask import Flask
 from flask import request, Response
 
+from secret import secret_path
+
 app = Flask(__name__)
-db = shelve.open('treelist-data')
+db = shelve.open('treelist.data')
 
 if 'visit-count' not in db:
     db['visit-count'] = 0
@@ -21,6 +23,12 @@ def index():
     resp = {'status': 'ok', 'visit-count': db['visit-count']}
 
     return json_response(resp)
+
+@app.route('/' + secret_path, methods=['POST'])
+def write():
+    data = request.json
+    print(data)
+    return json_response({'data': data})
     
 app.run(port=3000, debug=False)
 db.close()
