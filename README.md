@@ -1,5 +1,5 @@
 # Single-user sync server for Treelist
-This server persists a single, over-writeable json object. Configure the secret path in secret.py, and after that the json object can be POST to the secret path and read from the same place.
+This server persists a single, over-writeable json object. Configure the secret path in secret.py, and after that the json object can be POST to the secret path and GET from there as well. No history is preserved and all data must be written in every request.
 
 ## Install
 - `python3 -m venv env`
