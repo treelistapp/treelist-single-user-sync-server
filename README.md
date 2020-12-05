@@ -22,11 +22,11 @@ port = 3000
 
 Write:
 
-`curl -X POST -H 'Content-Type: application/json -d '{"test": 123}' http://localhost:3000/asdf`
+`curl -X POST -H 'Content-Type: application/json' -d '{"test": 123}' http://localhost:3000/asdf`
 
 Write from file `data.json`:
 
-`curl -X POST -H 'Content-Type: application/json -d @data.json http://localhost:3000/asdf`
+`curl -X POST -H 'Content-Type: application/json' -d @data.json http://localhost:3000/asdf`
 
 Read:
 
