@@ -11,7 +11,7 @@ This server persists a single, over-writeable json object. Configure the secret 
 ### Example
 `secret.py`:
 ```
-secret_path = asdf
+secret_path = 'asdf'
 port = 3000
 ```
 
