@@ -5,6 +5,9 @@
 - `source env/bin/activate`
 - `pip install -r requirements.txt`
 
+## Run
+- `python treelist_single_user_server.py`
+
 ## Usage from a client
 This server persists a single, over-writeable json object. Configure the secret path in secret.py, and after that the json object can be POST to the secret path and read from the same place.
 
