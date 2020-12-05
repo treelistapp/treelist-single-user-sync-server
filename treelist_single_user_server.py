@@ -3,10 +3,12 @@ import shelve
 
 from flask import Flask
 from flask import request, Response
+from flask_cors import CORS
 
 from secret import secret_path, port
 
 app = Flask(__name__)
+CORS(app)
 db = shelve.open('treelist.data')
 
 def json_response(obj):
