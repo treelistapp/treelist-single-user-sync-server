@@ -13,7 +13,7 @@ This server persists a single, over-writeable json object. Configure the secret 
 secret_path = '/asdf'
 port = 3000
 ```
-- `secret_path` should not be empty as the root path has other functionality.
+- `secret_path` should not be `'/'` as the root path has other functionality.
 
 ### Nginx
 Add this to `server` block to enable big file upload:
@@ -21,6 +21,7 @@ Add this to `server` block to enable big file upload:
 `client_max_body_size 100M;`
 
 ## Run
+- `source env/bin/activate` (unless you just did the installation)
 - `python treelist_single_user_server.py`
 
 ## Example usage with curl
